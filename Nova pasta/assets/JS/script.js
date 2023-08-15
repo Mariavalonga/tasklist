@@ -1,3 +1,17 @@
+let armazenar = [];
+function add() {
+    let init = document.getElementById("tarefa").value;
+    let information = new Task(randonId(), title, false);
+
+    if(init == ""){
+        alert("Digite algo válido!");
+        return;
+    }
+    information.push(armazenar);
+}
+console.log(armazenar);
+
+
 class Task{
     constructor(id, title, status) {
         this.id = id;
@@ -5,20 +19,18 @@ class Task{
         this.status = status
     }
 }
-class TaskList {
-    constructor() {
-        this.tasks = [];
-    }
-    addTask(task)
 
-}
+
+
+
+
 
 
 
 function randonId() {
     return Math.floor(Math.random() * 9999);
 }
-const taskList = new TaskList();
+
 
  function createTask() {
      let title = document.getElementById("newTask")
@@ -51,14 +63,5 @@ function showForm() {
     });
 }
 
-function createTask() {
-    let title = document.getElementById("areabox1").value;
-    let newTask = new Task(randomId(), title, false);
-        
-    tasks.addTask(newTask);
-  
-    document.getElementById("areabox1").value = "";
-    
-  
-    showForm();
-        }
+
+
